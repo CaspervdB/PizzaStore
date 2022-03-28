@@ -1,12 +1,15 @@
 import java.util.ArrayList;
+import java.util.Observable;
+import java.util.Observer;
 
-public class OvenObserver
+public class OvenObserver implements Observer
 {
     ArrayList<Oven> Ovens;
 
-    public void notifySubscribers()
+    @Override
+    public void update(Observable o, Object arg)
     {
-        //Hier komt wat code dat de ovens in de gaten houdt met een obeserver
+
     }
 }
 

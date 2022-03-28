@@ -1,7 +1,10 @@
-public class Oven
+import java.util.Observable;
+
+public class Oven extends Observable
 {
-    public void update()
+    public void notifySubscribers()
     {
+        notifyObservers();
         //Als er iets in de oven wordt geupdate, ziet de ovenObserver dat
     }
 }
