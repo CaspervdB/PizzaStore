@@ -10,6 +10,5 @@ class PizzaWinkelTest {
         Bestelling bestellingen = new Bestelling();
 
 //        Martini.bestelPizza("Salami");
-
     }
 }
