@@ -22,18 +22,16 @@ public class Pizza {
         this.prijs = prijs;
     }
 
-    public Pizza(String beschrijving, int prijs){
+    public Pizza(String beschrijving, int prijs) {
         this.beschrijving = beschrijving;
         this.prijs = prijs;
     }
 
-    public boolean getBaked()
-    {
+    public boolean getBaked() {
         return isGebakken;
     }
 
-    public void setBaked(boolean baked)
-    {
+    public void setBaked(boolean baked) {
         this.isGebakken = baked;
     }
 

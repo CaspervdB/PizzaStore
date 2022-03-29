@@ -6,8 +6,8 @@ public class PizzaFactory {
 
     private ArrayList<Pizza> Menu;
 
-    public ArrayList<Pizza> createPizzas(){
-         Menu = new ArrayList<Pizza>();
+    public ArrayList<Pizza> createPizzas() {
+        Menu = new ArrayList<Pizza>();
 
         Pizza Salami = new Pizza("Salami", 15);
         Pizza Kebab = new Pizza("Kebab", 15);
@@ -19,5 +19,5 @@ public class PizzaFactory {
 
         System.out.println(Menu);
         return Menu;
-        }
     }
+}
