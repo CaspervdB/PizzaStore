@@ -4,6 +4,8 @@ public class Pizza {
     public String beschrijving;
     public int prijs;
 
+    private boolean isGebakken;
+
     public String getBeschrijving() {
         return beschrijving;
     }
@@ -23,6 +25,16 @@ public class Pizza {
     public Pizza(String beschrijving, int prijs){
         this.beschrijving = beschrijving;
         this.prijs = prijs;
+    }
+
+    public boolean getBaked()
+    {
+        return isGebakken;
+    }
+
+    public void setBaked(boolean baked)
+    {
+        this.isGebakken = baked;
     }
 
 }
