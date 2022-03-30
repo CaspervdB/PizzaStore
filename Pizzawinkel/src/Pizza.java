@@ -1,37 +1,17 @@
 
-public class Pizza {
-    public String beschrijving;
-    public int prijs;
+public interface Pizza {
 
-    private boolean isGebakken;
 
-    public String getBeschrijving() {
-        return beschrijving;
-    }
+    public String getBeschrijving();
 
-    public void setBeschrijving(String beschrijving) {
-        this.beschrijving = beschrijving;
-    }
+    public void setBeschrijving(String beschrijving);
 
-    public int getPrijs() {
-        return prijs;
-    }
+    public int getPrijs();
 
-    public void setPrijs(int prijs) {
-        this.prijs = prijs;
-    }
+    public void setPrijs(int prijs);
 
-    public Pizza(String beschrijving, int prijs) {
-        this.beschrijving = beschrijving;
-        this.prijs = prijs;
-    }
+    public boolean getBaked();
 
-    public boolean getBaked() {
-        return isGebakken;
-    }
-
-    public void setBaked(boolean baked) {
-        this.isGebakken = baked;
-    }
+    public void setBaked(boolean baked);
 
 }
