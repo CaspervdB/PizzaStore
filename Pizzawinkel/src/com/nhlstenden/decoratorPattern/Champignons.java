@@ -17,39 +17,18 @@ public class Champignons extends PizzaDecorator
         return pizza.getDescription() + ", met Champignons";
     }
 
-    @Override
-    public void setDescription()
-    {
-
-    }
-
-    @Override
-    public double getCost()
-    {
-        return 0;
-    }
-
-    @Override
-    public void setCost()
-    {
-
-    }
 
     @Override
     public boolean getBaked()
     {
-        return false;
+        return pizza.getBaked();
     }
 
-    @Override
-    public void setBaked()
-    {
-
-    }
 
     @Override
-    public double cost()
+    public double getCost()
     {
         return pizza.getCost() + 0.50;
     }
+
 }

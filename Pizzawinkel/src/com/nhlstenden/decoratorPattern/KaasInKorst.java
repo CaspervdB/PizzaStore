@@ -18,39 +18,16 @@ public class KaasInKorst extends PizzaDecorator
     }
 
     @Override
-    public void setDescription()
-    {
-
-    }
-
-    @Override
     public double getCost()
     {
-        return 0;
-    }
-
-    @Override
-    public void setCost()
-    {
-
+        return pizza.getCost() + 2.50;
     }
 
     @Override
     public boolean getBaked()
     {
-        return false;
+        return pizza.getBaked();
     }
 
-    @Override
-    public void setBaked()
-    {
-
-    }
-
-    @Override
-    public double cost()
-    {
-        return pizza.getCost() + 2.50;
-    }
 
 }

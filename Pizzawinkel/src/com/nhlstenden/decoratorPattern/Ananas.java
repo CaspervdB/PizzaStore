@@ -14,42 +14,22 @@ public class Ananas extends PizzaDecorator
     @Override
     public String getDescription()
     {
-        return pizza.getDescription() + ", met annanas";
+        return pizza.getDescription() + ", met ananas";
     }
 
-    @Override
-    public void setDescription()
-    {
-
-    }
-
-    @Override
-    public double getCost()
-    {
-        return pizza.getCost() + 0.5;
-    }
-
-    @Override
-    public void setCost()
-    {
-
-    }
 
     @Override
     public boolean getBaked()
     {
-        return false;
+        return pizza.getBaked();
     }
 
-    @Override
-    public void setBaked()
-    {
-
-    }
 
     @Override
-    public double cost()
+    public double getCost()
     {
         return pizza.getCost() + 0.50;
     }
+
+
 }

@@ -18,38 +18,14 @@ public class ExtraKaas extends PizzaDecorator
     }
 
     @Override
-    public void setDescription()
-    {
-
-    }
-
-    @Override
     public double getCost()
     {
-        return 0;
-    }
-
-    @Override
-    public void setCost()
-    {
-
+        return pizza.getCost() + 1.0;
     }
 
     @Override
     public boolean getBaked()
     {
-        return false;
-    }
-
-    @Override
-    public void setBaked()
-    {
-
-    }
-
-    @Override
-    public double cost()
-    {
-        return pizza.getCost() + 1.0;
+        return pizza.getBaked();
     }
 }

@@ -1,0 +1,10 @@
+
+I
+java:S1125I"'Remove the unnecessary boolean literal.(øÚ³Ïøÿÿÿÿ8™ Øı/
+X	java:S125N"<This block of commented-out lines of code should be removed.(öÙ³º8™ Øı/
+I
+java:S1144"-Remove this unused private "addOvens" method.(ïÿüm8‚™ Øı/
+d
+java:S2259"BA "NullPointerException" could be thrown; "oven" is nullable here.(üå¯Íıÿÿÿÿ8 ™ Øı/
+_
+java:S2259="BA "NullPointerException" could be thrown; "oven" is nullable here.(ÓÉäÜ8¡™ Øı/
