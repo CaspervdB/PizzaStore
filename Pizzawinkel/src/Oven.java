@@ -1,4 +1,5 @@
 import java.util.Observable;
+import Pizzas.Pizza;
 
 public class Oven extends Observable {
     private Pizza pizza;

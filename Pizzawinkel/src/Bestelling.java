@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import Pizzas.Pizza;
 
 public class Bestelling {
     private ArrayList<Pizza> Pizzas;

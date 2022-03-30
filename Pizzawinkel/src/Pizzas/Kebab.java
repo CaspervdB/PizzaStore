@@ -1,9 +1,15 @@
+package Pizzas;
 
-public class Pizza {
+public class Kebab implements Pizzas.Pizza{
     public String beschrijving;
     public int prijs;
 
     private boolean isGebakken;
+
+    public Kebab() {
+        this.beschrijving = "Io sono la pizza kebab";//The pizzas speak Italian;
+        this.prijs = 14;
+    }
 
     public String getBeschrijving() {
         return beschrijving;
@@ -21,11 +27,6 @@ public class Pizza {
         this.prijs = prijs;
     }
 
-    public Pizza(String beschrijving, int prijs) {
-        this.beschrijving = beschrijving;
-        this.prijs = prijs;
-    }
-
     public boolean getBaked() {
         return isGebakken;
     }
@@ -33,5 +34,4 @@ public class Pizza {
     public void setBaked(boolean baked) {
         this.isGebakken = baked;
     }
-
 }

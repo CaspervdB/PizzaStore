@@ -1,5 +1,10 @@
 
 
+import Pizzas.Champignon;
+import Pizzas.Kebab;
+import Pizzas.Salami;
+import Pizzas.Pizza;
+
 import java.util.ArrayList;
 
 public class PizzaFactory {
@@ -9,9 +14,9 @@ public class PizzaFactory {
     public ArrayList<Pizza> createPizzas() {
         Menu = new ArrayList<Pizza>();
 
-        Pizza Salami = new Pizza("Salami", 15);
-        Pizza Kebab = new Pizza("Kebab", 15);
-        Pizza Champignon = new Pizza("Champignon", 15);
+        Pizza Salami = new Salami();
+        Pizza Kebab = new Kebab();
+        Pizza Champignon = new Champignon();
 
         Menu.add(Salami);
         Menu.add(Kebab);
