@@ -1,6 +1,9 @@
 package com.nhlstenden;
 
 import java.util.Observable;
+import java.util.Timer;
+import java.util.TimerTask;
+
 
 public class Oven extends Observable
 {
@@ -22,8 +25,15 @@ public class Oven extends Observable
 
     private void startTimer()
     {
-        //Hier moet een timer komen
-        pizzaIsReady();
+
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                pizzaIsReady();
+            }
+        }, 1*20*1000);
     }
 
     private void pizzaIsReady()

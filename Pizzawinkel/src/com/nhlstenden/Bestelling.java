@@ -2,17 +2,17 @@ package com.nhlstenden;
 
 import java.util.ArrayList;
 
-public class Bestelling
-{
+public class Bestelling {
     private ArrayList<Pizza> Pizzas;
 
-    public void addPizzas(Pizza pizza)
-    {
+    public Bestelling() {
+    }
+
+    public void addPizza(Pizza pizza) {
         this.Pizzas.add(pizza);
     }
 
-    public ArrayList<Pizza> getPizzas()
-    {
+    public ArrayList<Pizza> getPizzas() {
         return Pizzas;
     }
 }
