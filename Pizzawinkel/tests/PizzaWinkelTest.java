@@ -5,13 +5,12 @@ import com.nhlstenden.PizzaWinkel;
 import factoryMethodPattern.PizzaSalami;
 import org.junit.jupiter.api.Test;
 
-class PizzaWinkelTest
-{
+class PizzaWinkelTest {
 
     @Test
-    void StandaardTest()
-    {
+    void StandaardTest() {
         PizzaWinkel Martini = new PizzaWinkel();
+        Bestelling lijst = new Bestelling();
         Pizza pizzaSalami = Martini.createPizza("Salami");
         // bestelling
 
@@ -19,6 +18,8 @@ class PizzaWinkelTest
 //        pizzaSalami = new KaasInKorst(PizzaSalami);
 //        Pizza pizza1 = Martini();
 
+        lijst.addPizza(pizzaSalami);
+        Martini.newOrder(lijst);
 
 
 //        Beverage beverage2 = new DarkRoast();
