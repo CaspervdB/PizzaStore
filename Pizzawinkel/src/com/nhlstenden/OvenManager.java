@@ -6,9 +6,10 @@ import java.util.Observer;
 
 public class OvenManager implements Observer
 {
-    ArrayList<Oven> ovens;
-    ArrayList<Pizza> waitingList;
-    ArrayList<Bestelling> bestellingen;
+
+    public ArrayList<Oven> ovens  =  new ArrayList<Oven>();
+    public ArrayList<Pizza> waitingList  =  new ArrayList<Pizza>();
+    public ArrayList<Bestelling> bestellingen  =  new ArrayList<Bestelling>();
 
 
     private void addOvens()

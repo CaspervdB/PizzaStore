@@ -9,14 +9,14 @@ public interface Pizza
 
     String getDescription();
 
-    void setDescription();
+    void setDescription(String description);
 
     double getCost();
 
-    void setCost();
+    void setCost(double cost);
 
     boolean getBaked();
 
-    void setBaked();
+    void setBaked(boolean isBaked);
 
 }

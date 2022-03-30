@@ -2,7 +2,6 @@ import com.nhlstenden.Bestelling;
 import com.nhlstenden.Pizza;
 import com.nhlstenden.PizzaWinkel;
 
-import factoryMethodPattern.PizzaSalami;
 import org.junit.jupiter.api.Test;
 
 class PizzaWinkelTest {
