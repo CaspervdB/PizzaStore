@@ -1,6 +1,6 @@
 package com.nhlstenden.decoratorPattern;
 
-public class Ananas extends PizzaDecorator
-{
-
-}
+//public class Ananas extends PizzaDecorator
+//{
+//
+//}

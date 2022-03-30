@@ -1,6 +1,6 @@
 package com.nhlstenden;
 
-import factoryMethodPattern.PizzaFactory;
+import com.nhlstenden.factoryMethodPattern.PizzaFactory;
 
 import java.util.ArrayList;
 
@@ -15,7 +15,6 @@ public class PizzaWinkel {
         ovenManager.addOrder(bestelling);
 //        ovenManager.getWaitTime();
     }
-
 
     public Pizza createPizza(String Pizza) {
         return fabriek.createPizzas(Pizza);

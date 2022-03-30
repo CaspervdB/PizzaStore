@@ -1,5 +1,5 @@
 package com.nhlstenden.decoratorPattern;
 
-public class ExtraKaas extends PizzaDecorator
-{
-}
+//public class ExtraKaas extends PizzaDecorator
+//{
+//}

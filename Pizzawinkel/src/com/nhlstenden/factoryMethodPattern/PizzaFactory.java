@@ -1,12 +1,10 @@
-package factoryMethodPattern;
+package com.nhlstenden.factoryMethodPattern;
 //import factoryMethodPattern.PizzaChampignon;
-//import factoryMethodPattern.PizzaKebab;
+//import com.nhlstenden.factoryMethodPattern.PizzaKebab;
 //import factoryMethodPattern.PizzaMargaritha;
-//import factoryMethodPattern.PizzaSalami;
+//import com.nhlstenden.factoryMethodPattern.PizzaSalami;
 
 import com.nhlstenden.Pizza;
-
-import java.util.ArrayList;
 
 
 public class PizzaFactory {
