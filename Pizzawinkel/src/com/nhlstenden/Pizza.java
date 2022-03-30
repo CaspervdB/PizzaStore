@@ -5,15 +5,15 @@ public interface Pizza
     String beschrijving = "Unknown pizza";
     double prijs = 0.0;
 
-    boolean isGebakken = false;
+    boolean isBaked = false;
 
-    String getBeschrijving();
+    String getDescription();
 
-    void setBeschrijving();
+    void setDescription();
 
-    int getPrijs();
+    int getCost();
 
-    void setPrijs();
+    void setCost();
 
     boolean getBaked();
 
