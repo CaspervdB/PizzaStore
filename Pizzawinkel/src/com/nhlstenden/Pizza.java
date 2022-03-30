@@ -2,8 +2,8 @@ package com.nhlstenden;
 
 public interface Pizza
 {
-    String beschrijving = "Unknown pizza";
-    double prijs = 0.0;
+    String description = "Unknown pizza";
+    double cost = 0.0;
 
     boolean isBaked = false;
 
@@ -11,7 +11,7 @@ public interface Pizza
 
     void setDescription();
 
-    int getCost();
+    double getCost();
 
     void setCost();
 

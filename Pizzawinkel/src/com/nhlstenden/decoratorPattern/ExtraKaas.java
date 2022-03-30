@@ -24,7 +24,7 @@ public class ExtraKaas extends PizzaDecorator
     }
 
     @Override
-    public int getCost()
+    public double getCost()
     {
         return 0;
     }

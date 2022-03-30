@@ -24,9 +24,9 @@ public class Ananas extends PizzaDecorator
     }
 
     @Override
-    public int getCost()
+    public double getCost()
     {
-        return 0;
+        return pizza.getCost() + 0.5;
     }
 
     @Override

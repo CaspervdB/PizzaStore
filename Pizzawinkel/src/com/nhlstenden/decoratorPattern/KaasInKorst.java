@@ -24,7 +24,7 @@ public class KaasInKorst extends PizzaDecorator
     }
 
     @Override
-    public int getCost()
+    public double getCost()
     {
         return 0;
     }
