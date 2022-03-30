@@ -1,16 +1,25 @@
-public class PizzaSalami implements Pizza {
+package factoryMethodPattern;
+
+import com.nhlstenden.Pizza;
+
+public class PizzaChampignon implements Pizza {
 
     public String beschrijving;
     public int prijs;
     private boolean isGebakken;
 
-    public PizzaSalami() {
-        this.beschrijving = "Pizza Salami";
+    public PizzaChampignon() {
+        this.beschrijving = "Pizza Champignon";
         this.prijs = 15;
     }
 
     public String getBeschrijving() {
         return beschrijving;
+    }
+
+    @Override
+    public void setBeschrijving() {
+
     }
 
     public void setBeschrijving(String beschrijving) {
@@ -19,6 +28,11 @@ public class PizzaSalami implements Pizza {
 
     public int getPrijs() {
         return prijs;
+    }
+
+    @Override
+    public void setPrijs() {
+
     }
 
     public void setPrijs(int prijs) {
@@ -30,7 +44,13 @@ public class PizzaSalami implements Pizza {
         return isGebakken;
     }
 
+    @Override
+    public void setBaked() {
+
+    }
+
     public void setBaked(boolean baked) {
         this.isGebakken = baked;
     }
+
 }

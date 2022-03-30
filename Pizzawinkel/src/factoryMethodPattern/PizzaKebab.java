@@ -1,3 +1,7 @@
+package factoryMethodPattern;
+
+import com.nhlstenden.Pizza;
+
 public class PizzaKebab implements Pizza {
     public String beschrijving;
     public int prijs;
@@ -12,12 +16,22 @@ public class PizzaKebab implements Pizza {
         return beschrijving;
     }
 
+    @Override
+    public void setBeschrijving() {
+
+    }
+
     public void setBeschrijving(String beschrijving) {
         this.beschrijving = beschrijving;
     }
 
     public int getPrijs() {
         return prijs;
+    }
+
+    @Override
+    public void setPrijs() {
+
     }
 
     public void setPrijs(int prijs) {
@@ -27,6 +41,11 @@ public class PizzaKebab implements Pizza {
 
     public boolean getBaked() {
         return isGebakken;
+    }
+
+    @Override
+    public void setBaked() {
+
     }
 
     public void setBaked(boolean baked) {

@@ -7,7 +7,7 @@ public class PizzaFactory
 
     private ArrayList<Pizza> Menu;
 
-    public ArrayList<Pizza> createPizzas()
+    public ArrayList<Pizza> createPizzas(String[] pizzaList)
     {
         Menu = new ArrayList<Pizza>();
 
