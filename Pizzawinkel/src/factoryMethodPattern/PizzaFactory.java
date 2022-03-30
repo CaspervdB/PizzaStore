@@ -1,35 +1,34 @@
 package factoryMethodPattern;
+//import factoryMethodPattern.PizzaChampignon;
+//import factoryMethodPattern.PizzaKebab;
+//import factoryMethodPattern.PizzaMargaritha;
+//import factoryMethodPattern.PizzaSalami;
 
 import com.nhlstenden.Pizza;
 
 import java.util.ArrayList;
 
+
 public class PizzaFactory {
-
-    private ArrayList<Pizza> Order;
-
-    public ArrayList<Pizza> createPizzas(String[] PizzaStrings ) {
-        Order = new ArrayList<Pizza>();
-
-        for(String Pizzas : PizzaStrings){
-            switch(Pizzas) {
-                case "Salami":
-                    Pizza Salami = new PizzaSalami();
-                    Order.add(Salami);
-                    break;
-                case "Champignon":
-                    Pizza Champignon = new PizzaChampignon();
-                    Order.add(Champignon);
-                    break;
-                case "Kebab":
-                    Pizza Kebab = new PizzaKebab();
-                    Order.add(Kebab);
-                    break;
-                default:
-                    // code block
-            }
+    public Pizza createPizzas(String Pizza) {
+        Pizza pizza = new PizzaMargaritha();
+        switch (Pizza) {
+            case "Salami":
+                pizza = new PizzaSalami();
+//                Order.add(Salami);
+                break;
+            case "Champignon":
+                pizza = new PizzaChampignon();
+//                Order.add(Champignon);
+                break;
+            case "Kebab":
+                pizza = new PizzaChampignon();
+//                Order.add(Kebab);
+                break;
+            default:
+                // code block
         }
-
-        return Order;
+//        System.out.println(Menu);
+        return pizza;
     }
 }
