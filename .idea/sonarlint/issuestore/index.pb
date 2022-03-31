@@ -1,0 +1,23 @@
+
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+_
+/Pizzawinkel/src/com/nhlstenden/OvenManager.java,9\c\9c47e11112900c754ebe67556ce94e415c55ee90
+_
+/Pizzawinkel/src/com/nhlstenden/PizzaWinkel.java,d\3\d339ba8385e9e4b97e9ae0085ed992927c57538f
+V
+&Pizzawinkel/tests/PizzaWinkelTest.java,3\5\353f72e866d8cfd3fbfb27ac820e3c4c72abf189
+p
+@Pizzawinkel/src/com/nhlstenden/decoratorPattern/Champignons.java,1\c\1c841ab75bc2e154712e55d0e21807f0fe540987
+k
+;Pizzawinkel/src/com/nhlstenden/decoratorPattern/Ananas.java,6\c\6c66f43582ca73a6991ec1b24bdd9c006d9674f6
+Y
+)Pizzawinkel/src/com/nhlstenden/Pizza.java,0\9\09bcdf4a880de29b2f6f27a69ae91979d9b043d6
+s
+CPizzawinkel/src/com/nhlstenden/decoratorPattern/PizzaDecorator.java,4\4\447c5cd202ca7edb99aec50fdf500c80246acd89
+p
+@Pizzawinkel/src/com/nhlstenden/decoratorPattern/KaasInKorst.java,2\1\213cca388efc8b22d1ccbc7c9eb7d52fc45cedf0
+n
+>Pizzawinkel/src/com/nhlstenden/decoratorPattern/ExtraKaas.java,0\e\0ef2e135e0bf2cb683861d41ca056e6d44ac244d
+X
+(Pizzawinkel/src/com/nhlstenden/Main.java,c\a\ca3a164ee0a5cff9476fb457c51596cd093342ae
