@@ -20,6 +20,7 @@ public class OvenManager extends Observable implements Observer
         this.ovens.add(oven1);
     }
 
+    // bestelling in een oven stoppen en anders in de wachtrij
     public void addOrder(Order order)
     {
         this.orders.add(order);
@@ -32,6 +33,7 @@ public class OvenManager extends Observable implements Observer
                 waitingList.add(pizza);
     }
 
+    //return een vrije oven
     private Oven findAvailebleOven()
     {
         for (Oven oven : ovens)
@@ -42,6 +44,7 @@ public class OvenManager extends Observable implements Observer
         return null;
     }
 
+    // kijk of er een oven vrij is
     private boolean checkIfOvenISAvaileble()
     {
         for (Oven oven : ovens)
@@ -52,11 +55,11 @@ public class OvenManager extends Observable implements Observer
         return false;
     }
 
+    // krijg een update van een oven als een piza klaar is, daarna een nieuwe pizza in de oven doen vanuit de waintinglist
     @Override
     public void update(Observable o, Object arg)
     {
         checkIfOrderIsReady();
-
         Oven oven = findAvailebleOven();
         if (this.waitingList != null)
         {
@@ -65,6 +68,7 @@ public class OvenManager extends Observable implements Observer
         }
     }
 
+    // kijk of een order klaar is en stuur hem dan door naar Pizzawinkel
     private void checkIfOrderIsReady()
     {
         for (Order order : orders)

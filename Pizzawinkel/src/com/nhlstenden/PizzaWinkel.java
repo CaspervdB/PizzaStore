@@ -46,6 +46,7 @@ public class PizzaWinkel implements Observer
         }
     }
 
+    // krijg een update vanuit OvenManager als een bestelling klaar is, daarna wordt het bezorgd
     @Override
     public void update(Observable o, Object arg)
     {
