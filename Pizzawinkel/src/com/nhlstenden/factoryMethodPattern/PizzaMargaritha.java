@@ -9,7 +9,7 @@ public class PizzaMargaritha implements Pizza
 
     public PizzaMargaritha()
     {
-        this.description = "Pizza Salami";
+        this.description = "Pizza Margaritha";
         this.cost = 15.0;
     }
 

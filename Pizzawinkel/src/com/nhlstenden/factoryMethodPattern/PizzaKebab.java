@@ -9,7 +9,7 @@ public class PizzaKebab implements Pizza {
     private boolean isBaked;
 
     public PizzaKebab() {
-        this.description = "Pizza Salami";
+        this.description = "Pizza Kebab";
         this.cost = 15.0;
     }
 
