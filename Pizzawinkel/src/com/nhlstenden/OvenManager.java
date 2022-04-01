@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 
-public class OvenManager implements Observer
+public class OvenManager extends Observable implements Observer
 {
 
     public ArrayList<Oven> ovens  =  new ArrayList<Oven>();
     public ArrayList<Pizza> waitingList  =  new ArrayList<Pizza>();
     public ArrayList<Order> orders  =  new ArrayList<Order>();
+
+
 
 
     private void addOvens()
@@ -75,7 +77,7 @@ public class OvenManager implements Observer
                     i++;
                     if (i == order.getPizzas().size())
                     {
-//                        com.nhlstenden.PizzaWinkel.pizzaReady(bestelling);
+                        notifyObservers(order);
                     }
                 }
             }
