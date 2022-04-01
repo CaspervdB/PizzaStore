@@ -9,16 +9,6 @@ public class Main
 {
     public static void main(String[] args)
     {
-        Pizza pizza = new PizzaSalami();
-        pizza = new Ananas(pizza);
-        pizza = new ExtraKaas(pizza);
-        pizza = new KaasInKorst(pizza);
-
-        printPizza(pizza);
-    }
-
-    private static void printPizza(Pizza p)
-    {
-        System.out.println("Cost: " + p.getCost() + ", description: " + p.getDescription());
+        PizzaWinkel martini = new PizzaWinkel();
     }
 }
