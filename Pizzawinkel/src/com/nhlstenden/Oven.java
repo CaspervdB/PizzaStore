@@ -25,7 +25,6 @@ public class Oven extends Observable
 
     private void startTimer()
     {
-
         Timer timer = new Timer();
 
         timer.schedule(new TimerTask() {

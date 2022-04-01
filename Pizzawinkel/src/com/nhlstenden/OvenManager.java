@@ -9,7 +9,7 @@ public class OvenManager implements Observer
 
     public ArrayList<Oven> ovens  =  new ArrayList<Oven>();
     public ArrayList<Pizza> waitingList  =  new ArrayList<Pizza>();
-    public ArrayList<Bestelling> bestellingen  =  new ArrayList<Bestelling>();
+    public ArrayList<Order> orders  =  new ArrayList<Order>();
 
 
     private void addOvens()
@@ -18,10 +18,10 @@ public class OvenManager implements Observer
         this.ovens.add(oven1);
     }
 
-    public void addOrder(Bestelling bestelling)
+    public void addOrder(Order order)
     {
-        this.bestellingen.add(bestelling);
-        for (Pizza pizza : bestelling.getPizzas())
+        this.orders.add(order);
+        for (Pizza pizza : order.getPizzas())
             if (checkIfOvenISAvaileble())
             {
                 Oven oven = findAvailebleOven();
@@ -65,15 +65,15 @@ public class OvenManager implements Observer
 
     private void checkIfOrderIsReady()
     {
-        for (Bestelling bestelling : bestellingen)
+        for (Order order : orders)
         {
             int i = 0;
-            for (Pizza pizza : bestelling.getPizzas())
+            for (Pizza pizza : order.getPizzas())
             {
                 if (pizza.getBaked() == false)
                 {
                     i++;
-                    if (i == bestelling.getPizzas().size())
+                    if (i == order.getPizzas().size())
                     {
 //                        com.nhlstenden.PizzaWinkel.pizzaReady(bestelling);
                     }

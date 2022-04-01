@@ -2,10 +2,10 @@ package com.nhlstenden;
 
 import java.util.ArrayList;
 
-public class Bestelling {
+public class Order {
     private ArrayList<Pizza> Pizzas  = new ArrayList<Pizza>();;
 
-    public Bestelling() {
+    public Order() {
     }
 
     public void addPizza(Pizza pizza) {

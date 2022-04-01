@@ -1,4 +1,4 @@
-import com.nhlstenden.Bestelling;
+import com.nhlstenden.Order;
 import com.nhlstenden.Pizza;
 import com.nhlstenden.PizzaWinkel;
 
@@ -9,7 +9,7 @@ class PizzaWinkelTest {
     @Test
     void StandaardTest() {
         PizzaWinkel Martini = new PizzaWinkel();
-        Bestelling lijst = new Bestelling();
+        Order lijst = new Order();
         Pizza pizzaSalami = Martini.createPizza("Salami");
         // bestelling
 
