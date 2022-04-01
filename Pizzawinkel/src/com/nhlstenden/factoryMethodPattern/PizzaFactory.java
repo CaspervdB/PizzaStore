@@ -1,8 +1,4 @@
 package com.nhlstenden.factoryMethodPattern;
-//import factoryMethodPattern.PizzaChampignon;
-//import com.nhlstenden.factoryMethodPattern.PizzaKebab;
-//import factoryMethodPattern.PizzaMargaritha;
-//import com.nhlstenden.factoryMethodPattern.PizzaSalami;
 
 import com.nhlstenden.Pizza;
 
@@ -13,20 +9,18 @@ public class PizzaFactory {
         switch (Pizza) {
             case "Salami":
                 pizza = new PizzaSalami();
-//                Order.add(Salami);
                 break;
             case "Champignon":
                 pizza = new PizzaChampignon();
-//                Order.add(Champignon);
                 break;
             case "Kebab":
-                pizza = new PizzaChampignon();
-//                Order.add(Kebab);
+                pizza = new PizzaKebab();
+                break;
+            case "Margaritha":
+                pizza = new PizzaMargaritha();
                 break;
             default:
-                // code block
         }
-//        System.out.println(Menu);
         return pizza;
     }
 }

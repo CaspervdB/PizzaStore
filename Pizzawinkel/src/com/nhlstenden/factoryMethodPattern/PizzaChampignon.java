@@ -1,40 +1,35 @@
 package com.nhlstenden.factoryMethodPattern;
+
 import com.nhlstenden.Pizza;
-public class PizzaChampignon implements Pizza
-{
+
+public class PizzaChampignon implements Pizza {
 
     public String description;
     public double cost;
     private boolean isBaked;
 
-    public PizzaChampignon()
-    {
+    public PizzaChampignon() {
         this.description = "Pizza Salami";
         this.cost = 15.0;
     }
 
-    public String getDescription()
-    {
+    public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description)
-    {
+    public void setDescription(String description) {
         this.description = description;
     }
 
-    public double getCost()
-    {
+    public double getCost() {
         return cost;
     }
 
-    public void setCost(double cost)
-    {
+    public void setCost(double cost) {
         this.cost = cost;
     }
 
-    public boolean getBaked()
-    {
+    public boolean getBaked() {
         return isBaked;
     }
 

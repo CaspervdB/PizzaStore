@@ -13,6 +13,8 @@ public class GPSTracker {
         this.order = order;
     }
 
+    // bezorg pizza
+    // Om de x aantal minuten word een message getoond met betrekking tot de bezorging.s
     public void Deliver() {
         Timer timer = new Timer();
 

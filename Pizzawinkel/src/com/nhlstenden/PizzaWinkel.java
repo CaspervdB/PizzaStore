@@ -10,29 +10,35 @@ public class PizzaWinkel {
     PizzaFactory fabriek = new PizzaFactory();
     OvenManager ovenManager = new OvenManager();
 
+    // nieuwe order van de klant, hier begint het process
     public void newOrder(Order order) {
         ovenManager.addOrder(order);
     }
 
+    // wanneer de klant een Pizza aanvraagt halen we het pizza object op uit de pizza fabriek.
     public Pizza createPizza(String Pizza) {
         return fabriek.createPizzas(Pizza);
     }
 
+    // pizza is klaar
     public void PizzaReady(Order order) {
         orders.add(order);
     }
 
+    // bezorg order
     public void deliverOrder(Order order) {
-        new GPSTracker(order);
+        new GPSTracker(order).Deliver();
         removeOrder(order);
     }
 
-    public void pickupOrder(Order order){
+    // order is opgehaald
+    public void pickupOrder(Order order) {
         removeOrder(order);
     }
 
-    public void removeOrder(Order order){
-        if(orders.contains(order)){
+    //    Verwijder order uit arraylist met orders die klaar zijn
+    public void removeOrder(Order order) {
+        if (orders.contains(order)) {
             orders.remove(order);
         }
     }

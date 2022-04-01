@@ -5,26 +5,24 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 
-public class Oven extends Observable
-{
+public class Oven extends Observable {
     private Pizza pizza;
     private boolean isBaking;
 
-    public void notifySubscribers()
-    {
+    public void notifySubscribers() {
         notifyObservers();
         //Als er iets in de oven wordt geupdate, ziet de ovenObserver dat
     }
 
-    public void addPizza(Pizza pizza)
-    {
+    // zet pizza in de oven
+    public void addPizza(Pizza pizza) {
         this.pizza = pizza;
         this.isBaking = true;
         startTimer();
     }
 
-    private void startTimer()
-    {
+    //    Start de oven timer
+    private void startTimer() {
         Timer timer = new Timer();
 
         timer.schedule(new TimerTask() {
@@ -32,17 +30,16 @@ public class Oven extends Observable
             public void run() {
                 pizzaIsReady();
             }
-        }, 1*20*1000);
+        }, 1 * 20 * 1000);
     }
 
-    private void pizzaIsReady()
-    {
+    // pizza is klaar en mag worden opgehaald/bezorgd
+    private void pizzaIsReady() {
         this.isBaking = false;
         notifySubscribers();
     }
 
-    public boolean isFilled()
-    {
+    public boolean isFilled() {
         return isBaking;
     }
 }
