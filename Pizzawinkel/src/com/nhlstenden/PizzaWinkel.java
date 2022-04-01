@@ -4,8 +4,11 @@ import com.nhlstenden.factoryMethodPattern.PizzaFactory;
 import com.nhlstenden.proxyPattern.GPSTracker;
 
 import java.util.ArrayList;
+import java.util.Observable;
+import java.util.Observer;
 
-public class PizzaWinkel {
+public class PizzaWinkel implements Observer
+{
     ArrayList<Order> orders;
     PizzaFactory fabriek = new PizzaFactory();
     OvenManager ovenManager = new OvenManager();
@@ -35,5 +38,11 @@ public class PizzaWinkel {
         if(orders.contains(order)){
             orders.remove(order);
         }
+    }
+
+    @Override
+    public void update(Observable o, Object arg)
+    {
+        deliverOrder((Order) arg);
     }
 }

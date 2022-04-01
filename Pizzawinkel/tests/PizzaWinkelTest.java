@@ -1,4 +1,5 @@
 import com.nhlstenden.Order;
+import com.nhlstenden.OvenManager;
 import com.nhlstenden.Pizza;
 import com.nhlstenden.PizzaWinkel;
 
@@ -9,6 +10,8 @@ class PizzaWinkelTest {
     @Test
     void StandaardTest() {
         PizzaWinkel Martini = new PizzaWinkel();
+        OvenManager ovenManager = new OvenManager();
+        ovenManager.addObserver(Martini);
         Order lijst = new Order();
         Pizza pizzaSalami = Martini.createPizza("Salami");
         // bestelling
