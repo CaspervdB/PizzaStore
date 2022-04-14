@@ -2,6 +2,7 @@ package com.nhlstenden;
 
 import com.nhlstenden.factoryMethodPattern.PizzaFactory;
 import com.nhlstenden.proxyPattern.GPSTracker;
+import Pizzas.Pizza;
 
 import java.util.ArrayList;
 import java.util.Observable;
@@ -18,7 +19,7 @@ public class PizzaWinkel implements Observer
         ovenManager.addOrder(order);
     }
 
-    // wanneer de klant een Pizza aanvraagt halen we het pizza object op uit de pizza fabriek.
+    // wanneer de klant een Pizza aanvraagt, halen we het pizza-object op uit de pizzafabriek.
     public Pizza createPizza(String Pizza) {
         return fabriek.createPizzas(Pizza);
     }

@@ -1,10 +1,22 @@
 package Pizzas;
 
-public interface Pizza {
-    String getBeschrijving();
-    void setBeschrijving(String beschrijving);
-    int getPrijs();
-    void setPrijs(int prijs);
+public interface Pizza
+{
+    String description = "Unknown pizza";
+    double cost = 0.0;
+
+    boolean isBaked = false;
+
+    String getDescription();
+
+    void setDescription(String description);
+
+    double getCost();
+
+    void setCost(double cost);
+
     boolean getBaked();
-    void setBaked(boolean baked);
+
+    void setBaked(boolean isBaked);
+
 }

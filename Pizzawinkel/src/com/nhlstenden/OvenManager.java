@@ -3,6 +3,7 @@ package com.nhlstenden;
 import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
+import Pizzas.Pizza;
 
 public class OvenManager extends Observable implements Observer
 {
@@ -29,8 +30,10 @@ public class OvenManager extends Observable implements Observer
             {
                 Oven oven = findAvailebleOven();
                 oven.addPizza(pizza);
+                System.out.print("Er geen geen oven beschikbaar, pizza is op wachtlijst gezet");
             } else
                 waitingList.add(pizza);
+                System.out.print("Er geen geen oven beschikbaar, pizza is op wachtlijst gezet");
     }
 
     //return een vrije oven

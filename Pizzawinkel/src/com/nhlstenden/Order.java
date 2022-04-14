@@ -1,6 +1,7 @@
 package com.nhlstenden;
 
 import java.util.ArrayList;
+import Pizzas.Pizza;
 
 public class Order {
     private ArrayList<Pizza> Pizzas  = new ArrayList<Pizza>();;

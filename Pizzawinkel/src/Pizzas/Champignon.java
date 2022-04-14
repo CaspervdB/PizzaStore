@@ -27,6 +27,30 @@ public class Champignon implements Pizzas.Pizza{
         this.prijs = prijs;
     }
 
+    @Override
+    public String getDescription()
+    {
+        return null;
+    }
+
+    @Override
+    public void setDescription(String description)
+    {
+
+    }
+
+    @Override
+    public double getCost()
+    {
+        return 0;
+    }
+
+    @Override
+    public void setCost(double cost)
+    {
+
+    }
+
     public boolean getBaked() {
         return isGebakken;
     }
