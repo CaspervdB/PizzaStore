@@ -21,6 +21,11 @@ public class OvenManager extends Observable implements Observer
         Oven oven1 = new Oven();
         Oven oven2 = new Oven();
         Oven oven3 = new Oven();
+
+        oven1.addObserver(this);
+        oven2.addObserver(this);
+        oven3.addObserver(this);
+
         this.ovens.add(oven1);
         this.ovens.add(oven2);
         this.ovens.add(oven3);
@@ -34,12 +39,12 @@ public class OvenManager extends Observable implements Observer
             if (checkIfOvenISAvaileble())
             {
                 Oven oven = findAvailebleOven();
+                System.out.print("Pizza wordt in oven geze0t\n\r");
                 oven.addPizza(pizza);
-                System.out.print("Pizza is in oven gezet");
             } else
             {
                 waitingList.add(pizza);
-                System.out.print("Er geen geen oven beschikbaar, pizza is op wachtlijst gezet");
+                System.out.print("Er geen geen oven beschikbaar, pizza is op wachtlijst gezet\n\r");
             }
     }
 
@@ -65,10 +70,11 @@ public class OvenManager extends Observable implements Observer
         return false;
     }
 
-    // krijg een update van een oven als een piza klaar is, daarna een nieuwe pizza in de oven doen vanuit de waintinglist
+    // krijg een update van een oven als een pizza klaar is, daarna een nieuwe pizza in de oven doen vanuit de waintinglist
     @Override
     public void update(Observable o, Object arg)
     {
+        System.out.print("De ovenmanager krijgt bericht van observeble\n\r");
         checkIfOrderIsReady();
         Oven oven = findAvailebleOven();
         if (this.waitingList != null)

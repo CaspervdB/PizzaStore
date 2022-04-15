@@ -11,6 +11,7 @@ public class Oven extends Observable {
     private boolean isBaking;
 
     public void notifySubscribers() {
+        setChanged();
         notifyObservers();
         //Als er iets in de oven wordt geupdate, ziet de ovenObserver dat
     }
@@ -25,10 +26,12 @@ public class Oven extends Observable {
     //    Start de oven timer
     private void startTimer() {
         Timer timer = new Timer();
+        System.out.print("De oven staat aan\n\r");
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
+                System.out.print("De oven is klaar\n\r");
                 pizzaIsReady();
             }
         }, 1 * 20 * 1000);
@@ -38,6 +41,7 @@ public class Oven extends Observable {
     private void pizzaIsReady() {
         this.isBaking = false;
         notifySubscribers();
+        System.out.print("Subscribers zijn genotivied\n\r");
     }
 
     public boolean isFilled() {

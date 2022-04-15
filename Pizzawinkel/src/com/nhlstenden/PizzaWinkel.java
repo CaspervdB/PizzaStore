@@ -10,7 +10,7 @@ import java.util.Observer;
 
 public class PizzaWinkel implements Observer
 {
-    ArrayList<Order> orders;
+    ArrayList<Order> orders;//Dit zijn de orders die klaar zijn
     PizzaFactory fabriek = new PizzaFactory();
     OvenManager ovenManager = new OvenManager();
 
@@ -33,6 +33,7 @@ public class PizzaWinkel implements Observer
     public void deliverOrder(Order order) {
         new GPSTracker(order).Deliver();
         removeOrder(order);
+        System.out.print("De pizza is bezorgd");
     }
 
     // order is opgehaald
@@ -52,5 +53,6 @@ public class PizzaWinkel implements Observer
     public void update(Observable o, Object arg)
     {
         deliverOrder((Order) arg);
+        System.out.print("De pizza in de over is klaar\n\r");
     }
 }
