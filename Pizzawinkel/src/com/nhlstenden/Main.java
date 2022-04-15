@@ -1,10 +1,5 @@
 package com.nhlstenden;
 
-import Pizzas.Pizza;
-import Pizzas.Salami;
-import com.nhlstenden.decoratorPattern.Ananas;
-import com.nhlstenden.decoratorPattern.ExtraKaas;
-import com.nhlstenden.decoratorPattern.KaasInKorst;
 import com.nhlstenden.factoryMethodPattern.PizzaSalami;
 
 public class Main
@@ -13,7 +8,7 @@ public class Main
     {
         PizzaWinkel martini = new PizzaWinkel();
         Order bestellingEen = new Order();
-        Pizza pizzaEen = new Salami();
+        Pizza pizzaEen = new PizzaSalami();
         bestellingEen.addPizza(pizzaEen);
         martini.newOrder(bestellingEen);
     }

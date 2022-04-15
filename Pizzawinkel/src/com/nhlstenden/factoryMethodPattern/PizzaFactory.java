@@ -1,6 +1,6 @@
 package com.nhlstenden.factoryMethodPattern;
 
-import Pizzas.Pizza;
+import com.nhlstenden.Pizza;
 
 
 public class PizzaFactory {

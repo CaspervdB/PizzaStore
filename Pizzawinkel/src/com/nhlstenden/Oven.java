@@ -25,16 +25,16 @@ public class Oven extends Observable {
 
     //    Start de oven timer
     private void startTimer() {
-        Timer timer = new Timer();
-        System.out.print("De oven staat aan\n\r");
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                System.out.print("De oven is klaar\n\r");
-                pizzaIsReady();
-            }
-        }, 1 * 20 * 1000);
+        new java.util.Timer().schedule(
+                new java.util.TimerTask() {
+                    @Override
+                    public void run() {
+                        pizzaIsReady();
+                    }
+                },
+                5000
+        );
     }
 
     // pizza is klaar en mag worden opgehaald/bezorgd
