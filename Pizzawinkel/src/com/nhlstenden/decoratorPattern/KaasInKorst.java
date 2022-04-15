@@ -15,7 +15,7 @@ public class KaasInKorst extends PizzaDecorator
     }
     /**
      * voegt "met kaas in de korst" toe aan de omschrijving van de pizza
-     * @return print line met de omschrijving
+     * @return printline met de omschrijving
      */
     @Override
     public String getDescription()

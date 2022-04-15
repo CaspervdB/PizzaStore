@@ -17,7 +17,7 @@ public class Ananas extends PizzaDecorator
 
     /**
      * voegt "met ananas" toe aan de omschrijving van de pizza
-     * @return print line met de omschrijving
+     * @return printline met de omschrijving
      */
     @Override
     public String getDescription()

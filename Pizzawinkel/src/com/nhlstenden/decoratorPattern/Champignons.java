@@ -15,7 +15,7 @@ public class Champignons extends PizzaDecorator
     }
     /**
      * voegt "met champignons" toe aan de omschrijving van de pizza
-     * @return print line met de omschrijving
+     * @return printline met de omschrijving
      */
     @Override
     public String getDescription()
