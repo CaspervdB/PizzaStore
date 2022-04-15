@@ -1,9 +1,6 @@
 package com.nhlstenden;
 
 import java.util.Observable;
-import java.util.Timer;
-import java.util.TimerTask;
-import Pizzas.Pizza;
 
 
 public class Oven extends Observable {
@@ -11,6 +8,7 @@ public class Oven extends Observable {
     private boolean isBaking;
 
     public void notifySubscribers() {
+        System.out.println();
         notifyObservers();
         //Als er iets in de oven wordt geupdate, ziet de ovenObserver dat
     }
@@ -24,18 +22,21 @@ public class Oven extends Observable {
 
     //    Start de oven timer
     private void startTimer() {
-        Timer timer = new Timer();
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                pizzaIsReady();
-            }
-        }, 1 * 20 * 1000);
+        new java.util.Timer().schedule(
+                new java.util.TimerTask() {
+                    @Override
+                    public void run() {
+                        pizzaIsReady();
+                    }
+                },
+                5000
+        );
     }
 
     // pizza is klaar en mag worden opgehaald/bezorgd
     private void pizzaIsReady() {
+        System.out.println(" Pizza klaar");
         this.isBaking = false;
         notifySubscribers();
     }

@@ -2,7 +2,6 @@ package com.nhlstenden;
 
 import com.nhlstenden.factoryMethodPattern.PizzaFactory;
 import com.nhlstenden.proxyPattern.GPSTracker;
-import Pizzas.Pizza;
 
 import java.util.ArrayList;
 import java.util.Observable;

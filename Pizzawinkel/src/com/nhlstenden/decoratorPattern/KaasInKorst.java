@@ -1,6 +1,6 @@
 package com.nhlstenden.decoratorPattern;
 
-import Pizzas.Pizza;
+import com.nhlstenden.Pizza;
 
 public class KaasInKorst extends PizzaDecorator
 {

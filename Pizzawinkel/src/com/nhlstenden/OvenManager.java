@@ -3,7 +3,6 @@ package com.nhlstenden;
 import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
-import Pizzas.Pizza;
 
 public class OvenManager extends Observable implements Observer
 {
