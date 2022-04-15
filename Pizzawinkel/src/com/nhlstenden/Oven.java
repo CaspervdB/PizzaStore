@@ -3,7 +3,7 @@ package com.nhlstenden;
 import java.util.Observable;
 import java.util.Timer;
 import java.util.TimerTask;
-import Pizzas.Pizza;
+import com.nhlstenden.Pizza;
 
 
 public class Oven extends Observable {
