@@ -30,10 +30,12 @@ public class OvenManager extends Observable implements Observer
             {
                 Oven oven = findAvailebleOven();
                 oven.addPizza(pizza);
-                System.out.print("Er geen geen oven beschikbaar, pizza is op wachtlijst gezet");
+                System.out.print("Pizza is in oven gezet");
             } else
+            {
                 waitingList.add(pizza);
                 System.out.print("Er geen geen oven beschikbaar, pizza is op wachtlijst gezet");
+            }
     }
 
     //return een vrije oven
