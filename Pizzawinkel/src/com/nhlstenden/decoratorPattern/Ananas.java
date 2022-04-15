@@ -32,7 +32,13 @@ public class Ananas extends PizzaDecorator
     @Override
     public boolean getBaked()
     {
-        return pizza.getBaked();
+       return pizza.getBaked();
+    }
+
+    @Override
+    public void setBaked(boolean isBaked)
+    {
+        pizza.setBaked(isBaked);
     }
 
     /**
@@ -44,6 +50,5 @@ public class Ananas extends PizzaDecorator
     {
         return pizza.getCost() + 0.50;
     }
-
 
 }

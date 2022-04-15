@@ -11,12 +11,8 @@ import com.nhlstenden.factoryMethodPattern.PizzaSalami;
 public class Main
 {
     public static void main(String[] args)
-    {
+    {   //Aanmaken van PizzaWinkel
         PizzaWinkel martini = new PizzaWinkel();
-        Order bestellingEen = new Order();
-        Pizza pizzaEen = new PizzaSalami();
-        bestellingEen.addPizza(pizzaEen);
-        martini.newOrder(bestellingEen);
 
         /**
          * Aanmaken van Pizza's
@@ -38,22 +34,15 @@ public class Main
 
         pizzaKebab = new ExtraKaas(pizzaKebab);
 
-        /**
-         * Pizza informatie printen op de console
-         */
-        printPizza(pizzaSalami);
-        printPizza(pizzaFungi);
-        printPizza(pizzaKebab);
-        printPizza(pizzaMargaritha);
-    }
 
-    /**
-     * Print de kosten en omschrijving van een pizza
-     * @param p Pizza object
-     */
+        //Nieuwe bestelling maken
+        Order bestellingEen = new Order();
+        bestellingEen.addPizza(pizzaKebab);
+        bestellingEen.addPizza(pizzaFungi);
+        bestellingEen.addPizza(pizzaKebab);
+        bestellingEen.addPizza(pizzaMargaritha);
+        martini.newOrder(bestellingEen);
 
-    private static void printPizza(Pizza p)
-    {
-        System.out.println("Cost: " + p.getCost() + ", description: " + p.getDescription());
+
     }
 }

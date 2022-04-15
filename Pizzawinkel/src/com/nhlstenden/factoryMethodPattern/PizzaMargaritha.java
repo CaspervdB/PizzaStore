@@ -11,6 +11,7 @@ public class PizzaMargaritha implements Pizza
     {
         this.description = "Pizza Margaritha";
         this.cost = 15.0;
+        this.isBaked = false;
     }
 
     public String getDescription()

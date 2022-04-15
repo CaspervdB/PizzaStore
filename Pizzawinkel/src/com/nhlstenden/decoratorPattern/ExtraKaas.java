@@ -9,6 +9,7 @@ public class ExtraKaas extends PizzaDecorator
      * Constructor voor een pizza met extra kaas
      * @param pizza
      */
+
     public ExtraKaas(Pizza pizza)
     {
         this.pizza = pizza;
@@ -17,6 +18,7 @@ public class ExtraKaas extends PizzaDecorator
      * voegt "met extra kaas" toe aan de omschrijving van de pizza
      * @return printline met de omschrijving
      */
+
     @Override
     public String getDescription()
     {
@@ -26,11 +28,13 @@ public class ExtraKaas extends PizzaDecorator
      * Voegt de kosten van de extra topping toe aan de pizza
      * @return double met de kosten
      */
+
     @Override
     public double getCost()
     {
         return pizza.getCost() + 1.0;
     }
+
     /**
      * bak status van de pizza
      * @return boolean getBaked
@@ -39,5 +43,11 @@ public class ExtraKaas extends PizzaDecorator
     public boolean getBaked()
     {
         return pizza.getBaked();
+    }
+
+    @Override
+    public void setBaked(boolean isBaked)
+    {
+        pizza.setBaked(isBaked);
     }
 }

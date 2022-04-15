@@ -43,4 +43,9 @@ public class Champignons extends PizzaDecorator
         return pizza.getCost() + 0.50;
     }
 
+    @Override
+    public void setBaked(boolean isBaked)
+    {
+        pizza.setBaked(isBaked);
+    }
 }

@@ -6,6 +6,8 @@ import com.nhlstenden.proxyPattern.GPSTracker;
 import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class PizzaWinkel implements Observer
 {
@@ -13,12 +15,10 @@ public class PizzaWinkel implements Observer
     PizzaFactory fabriek = new PizzaFactory();
     OvenManager ovenManager = new OvenManager();
 
+    Lock lock = new ReentrantLock();
 
     public PizzaWinkel() {
-        for (Oven oven : ovenManager.ovens)
-        {
-            oven.addObserver(this);
-        }
+        ovenManager.addObserver(this);
     }
 
     // nieuwe order van de klant, hier begint het process
@@ -34,14 +34,30 @@ public class PizzaWinkel implements Observer
     // pizza is klaar
     public void PizzaReady(Order order) {
         orders.add(order);
+        printBon(order);
         deliverOrder(order);
+    }
+
+    private void printBon(Order order){
+        for (Pizza pizza : order.getPizzas())
+        {
+            this.printPizza(pizza);
+        }
+    }
+
+    /*
+    * Print de kosten en omschrijving van een pizza
+    * @param p Pizza object
+    */
+    private static void printPizza(Pizza p)
+    {
+        System.out.println("Cost: " + p.getCost() + ", description: " + p.getDescription());
     }
 
     // bezorg order
     public void deliverOrder(Order order) {
         new GPSTracker(order).Deliver();
-        removeOrder(order);
-        System.out.print("De pizza is bezorgd");
+        removeOrder(order);;
     }
 
     // order is opgehaald
@@ -60,7 +76,6 @@ public class PizzaWinkel implements Observer
     @Override
     public void update(Observable o, Object arg)
     {
-        System.out.print("De pizza in de over is klaar\n\r");
         PizzaReady((Order) arg);
     }
 }

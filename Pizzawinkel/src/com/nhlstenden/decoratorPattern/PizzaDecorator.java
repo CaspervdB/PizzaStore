@@ -33,13 +33,4 @@ public abstract class PizzaDecorator implements Pizza
     {
         setCost(cost);
     }
-
-    /**
-     * Zet de bak status van een pizza met een boolean
-     * @param isBaked
-     */
-    public void setBaked(boolean isBaked)
-    {
-        setBaked(isBaked);
-    }
 }

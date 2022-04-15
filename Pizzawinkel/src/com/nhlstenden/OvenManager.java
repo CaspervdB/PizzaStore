@@ -3,6 +3,8 @@ package com.nhlstenden;
 import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class OvenManager extends Observable implements Observer
 {
@@ -15,11 +17,14 @@ public class OvenManager extends Observable implements Observer
         addOvens();
     }
 
+    Lock lock = new ReentrantLock();//Dit wordt gebruikt om de thread to locket zodat er niet perongeluk een pizza in de oven wordt gezet, die iemand anders ook al in de oven aan het zetten is
+
+    //Drie ovens toevoegen
     private void addOvens()
     {
-        Oven oven1 = new Oven();
-        Oven oven2 = new Oven();
-        Oven oven3 = new Oven();
+        Oven oven1 = new Oven(1);
+        Oven oven2 = new Oven(2);
+        Oven oven3 = new Oven(3);
 
         oven1.addObserver(this);
         oven2.addObserver(this);
@@ -35,20 +40,22 @@ public class OvenManager extends Observable implements Observer
     {
         this.orders.add(order);
         for (Pizza pizza : order.getPizzas())
-            if (checkIfOvenISAvaileble())
+        {
+            if (checkIfOvenIsAvailable())
             {
-                Oven oven = findAvailebleOven();
-                System.out.print("Pizza wordt in oven geze0t\n\r");
+                Oven oven = findAvailableOven();
+                System.out.println(pizza.getDescription() + " wordt in oven " + oven.getNumber() + " gezet.");
                 oven.addPizza(pizza);
             } else
             {
                 waitingList.add(pizza);
-                System.out.print("Er geen geen oven beschikbaar, pizza is op wachtlijst gezet\n\r");
+                System.out.println("Er is geen oven meer beschikbaar, " + pizza.getDescription() + " is op wachtlijst gezet.");
             }
+        }
     }
 
     //return een vrije oven
-    private Oven findAvailebleOven()
+    private Oven findAvailableOven()
     {
         for (Oven oven : ovens)
         {
@@ -59,7 +66,7 @@ public class OvenManager extends Observable implements Observer
     }
 
     // kijk of er een oven vrij is
-    private boolean checkIfOvenISAvaileble()
+    private boolean checkIfOvenIsAvailable()
     {
         for (Oven oven : ovens)
         {
@@ -69,19 +76,28 @@ public class OvenManager extends Observable implements Observer
         return false;
     }
 
-    // krijg een update van een oven als een pizza klaar is, daarna een nieuwe pizza in de oven doen vanuit de waintinglist
+    // krijg een update van een oven als een pizza klaar is, daarna een nieuwe pizza in de oven doen vanuit de waitinglist
     @Override
     public void update(Observable o, Object arg)
     {
-        System.out.print("De ovenmanager krijgt bericht van observeble\n\r");
+        lock.lock();
         checkIfOrderIsReady();
-        Oven oven = findAvailebleOven();
-        if (this.waitingList.size() != 0)
+        if (!this.waitingList.isEmpty())
         {
-            System.out.print("test");
-            oven.addPizza(waitingList.get(0));
-            this.waitingList.remove(0);
+            putPizzaFromWaitingListInOven();
+            return;
         }
+        System.out.println("Er staan geen pizza's meer op de wachtlijst.");
+        lock.unlock();
+    }
+
+    private void putPizzaFromWaitingListInOven()
+    {
+        Oven oven = findAvailableOven();
+        oven.addPizza(this.waitingList.get(0));
+        System.out.println(this.waitingList.get(0).getDescription() + " is van de wachtlijst afgehaald en in oven " + oven.getNumber() + " geplaatst.");
+        this.waitingList.remove(0);
+        lock.unlock();
     }
 
     // kijk of een order klaar is en stuur hem dan door naar Pizzawinkel
@@ -92,11 +108,13 @@ public class OvenManager extends Observable implements Observer
             int i = 0;
             for (Pizza pizza : order.getPizzas())
             {
-                if (pizza.getBaked() == false)
+                if (pizza.getBaked() == true)
                 {
                     i++;
                     if (i == order.getPizzas().size())
                     {
+                        System.out.println("Er is een order klaar");
+                        setChanged();
                         notifyObservers(order);
                     }
                 }

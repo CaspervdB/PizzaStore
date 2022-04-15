@@ -41,5 +41,9 @@ public class KaasInKorst extends PizzaDecorator
         return pizza.getBaked();
     }
 
-
+    @Override
+    public void setBaked(boolean isBaked)
+    {
+        pizza.setBaked(isBaked);
+    }
 }
