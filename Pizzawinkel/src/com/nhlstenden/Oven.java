@@ -3,7 +3,7 @@ package com.nhlstenden;
 import java.util.Observable;
 import java.util.Timer;
 import java.util.TimerTask;
-import Pizzas.Pizza;
+import com.nhlstenden.Pizza;
 
 
 public class Oven extends Observable {
@@ -11,6 +11,7 @@ public class Oven extends Observable {
     private boolean isBaking;
 
     public void notifySubscribers() {
+        setChanged();
         notifyObservers();
         //Als er iets in de oven wordt geupdate, ziet de ovenObserver dat
     }
@@ -24,20 +25,23 @@ public class Oven extends Observable {
 
     //    Start de oven timer
     private void startTimer() {
-        Timer timer = new Timer();
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                pizzaIsReady();
-            }
-        }, 1 * 20 * 1000);
+        new java.util.Timer().schedule(
+                new java.util.TimerTask() {
+                    @Override
+                    public void run() {
+                        pizzaIsReady();
+                    }
+                },
+                5000
+        );
     }
 
     // pizza is klaar en mag worden opgehaald/bezorgd
     private void pizzaIsReady() {
         this.isBaking = false;
         notifySubscribers();
+        System.out.print("Subscribers zijn genotivied\n\r");
     }
 
     public boolean isFilled() {

@@ -1,6 +1,6 @@
 package com.nhlstenden.decoratorPattern;
 
-import Pizzas.Pizza;
+import com.nhlstenden.Pizza;
 
 public abstract class PizzaDecorator implements Pizza
 {

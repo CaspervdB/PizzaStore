@@ -1,4 +1,4 @@
-package Pizzas;
+package com.nhlstenden;
 
 public interface Pizza
 {

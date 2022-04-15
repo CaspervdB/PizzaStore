@@ -16,7 +16,7 @@ public class Main
     {
         PizzaWinkel martini = new PizzaWinkel();
         Order bestellingEen = new Order();
-        Pizza pizzaEen = new Salami();
+        Pizza pizzaEen = new PizzaSalami();
         bestellingEen.addPizza(pizzaEen);
         martini.newOrder(bestellingEen);
 
