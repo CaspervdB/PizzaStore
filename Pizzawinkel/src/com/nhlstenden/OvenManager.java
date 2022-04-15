@@ -76,8 +76,9 @@ public class OvenManager extends Observable implements Observer
         System.out.print("De ovenmanager krijgt bericht van observeble\n\r");
         checkIfOrderIsReady();
         Oven oven = findAvailebleOven();
-        if (this.waitingList != null)
+        if (this.waitingList.size() != 0)
         {
+            System.out.print("test");
             oven.addPizza(waitingList.get(0));
             this.waitingList.remove(0);
         }
