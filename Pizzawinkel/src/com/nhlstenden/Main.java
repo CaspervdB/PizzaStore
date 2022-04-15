@@ -1,7 +1,5 @@
 package com.nhlstenden;
 
-import Pizzas.Pizza;
-import Pizzas.Salami;
 import com.nhlstenden.decoratorPattern.Ananas;
 import com.nhlstenden.decoratorPattern.ExtraKaas;
 import com.nhlstenden.decoratorPattern.KaasInKorst;
