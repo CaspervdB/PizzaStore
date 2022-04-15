@@ -12,13 +12,18 @@ public class OvenManager extends Observable implements Observer
     public ArrayList<Pizza> waitingList  =  new ArrayList<Pizza>();
     public ArrayList<Order> orders  =  new ArrayList<Order>();
 
-
-
+    public OvenManager() {
+        addOvens();
+    }
 
     private void addOvens()
     {
         Oven oven1 = new Oven();
+        Oven oven2 = new Oven();
+        Oven oven3 = new Oven();
         this.ovens.add(oven1);
+        this.ovens.add(oven2);
+        this.ovens.add(oven3);
     }
 
     // bestelling in een oven stoppen en anders in de wachtrij
